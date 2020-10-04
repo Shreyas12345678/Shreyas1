@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!----->
+<script>
+  function myFunction(name, fees,lab, medical,total,Hostel) {
+var n=name;
+var mes1="   your course name is: ";
+var j=fees;
+var mes2="Fees per anum is :";
+var l=lab;
+var mes3="Lab fees is:";
+var m= medical;
+var mes4="your medical fees is :";
+var h=Hostel;
+var mes6="your hostel and mess fees is :";
+var t=total;
+
+var mes5= "your total fees is :";
+
+ document.write(mes1.fontsize(6));
+ 
+ document.write(n.fontsize(5)+"<br>");
+ document.write("<br>");
+  document.write(mes2.fontsize(6));
+ document.write(j.fontsize(5)+"<br>");
+ document.write("<br>");
+
+  document.write(mes3.fontsize(6));
+   document.write(l.fontsize(5)+"<br>");
+   document.write("<br>");
+
+    document.write(mes4.fontsize(6));
+     document.write(m.fontsize(5)+"<br>");
+     document.write("<br>");
+
+     document.write(mes6.fontsize(6));
+     document.write(h.fontsize(5)+"<br>");
+     document.write("<br>");
+
+      document.write(mes5.fontsize(6));
+       document.write(t.fontsize(5));
+       document.write("<br>");
+ 
+}
+    </script>
+    
+    
+
+<!----->
+<style type="text/css">
+/*
+	Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
+	*/
+	Generic Styling, for Desktops/Laptops 
+*/
+body{
+    
+   background-color: blueviolet;
+}
+.one{
+    display:block;
+    border:1px solid black;
+    background-image: linear-gradient(to right, rgba(255,0,0,0.1), rgba(255,0,0,0.3));
+   
+}
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 95%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Course Name"; }
+	td:nth-of-type(2):before { content: "Academic year"; }
+	td:nth-of-type(3):before { content: "seats availbale"; }
+	td:nth-of-type(4):before { content: "cut-off"; }
+	td:nth-of-type(5):before { content: "total fees"; }
+	td:nth-of-type(6):before { content: "other"; }
+	/*td:nth-of-type(7):before { content: "Feesdback"; }*/
+	td:nth-of-type(8):before { content: "apply"; }
+	/*td:nth-of-type(9):before { content: "GPA"; }
+	td:nth-of-type(10):before { content: "Arbitrary Data"; */
+}
+</style>
+<body>
+    <div class="one">
+    <table>
+        <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Academic year</th>
+            <th>seets available</th>
+            <th>cut-off</th>
+            <th>Tution fees</th>
+            <th>other expence</th>
+            <th>Hostel and mess</th>
+            <th>Apply</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>computer science</td>
+            <td>2021</td>
+            <td>1000</td>
+            <td>1290</td>
+            <td>300000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('computer science','300000','50000','10000','461000','12000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>computer and Comunication</td>
+            <td>2021</td>
+            <td>1000</td>
+            <td>2900</td>
+            <td>290000</td>
+            <td>10000</td>
+            <td>100000</td>
+          
+            <td><button onclick="myFunction('computer and Communication','290000','50000','10000','351000','100000')">Apply here</button></td>
+        </tr>
+
+        <tr>
+            <td>IT</td>
+            <td>2021</td>
+            <td>7000</td>
+            <td>3500</td>
+            <td>270000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('IT','270000','50000','10000','436000','100000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>AI</td>
+            <td>2021</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>400000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('AI','400000','50000','10000','580000','104000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>Data science</td>
+            <td>2021</td>
+            <td>5000</td>
+            <td>700</td>
+            <td>380000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('Data scienc','380000','50000','10000','540000','104000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>Electronics and Communication</td>
+            <td>2021</td>
+            <td>300</td>
+            <td>4000</td>
+            <td>320000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('Electronics and Communication','320000','50000','10000','4710000','100000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>Electronics Electrical</td>
+            <td>2021</td>
+            <td>400</td>
+            <td>5400</td>
+            <td>320000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('Electronics and Electrical','320000','50000','10000','4710000','100000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>Civil</td>
+            <td>2021</td>
+            <td>400</td>
+            <td>7000</td>
+            <td>250000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('Civil','250000','50000','10000','410000','100000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>MEchanical</td>
+            <td>2021</td>
+            <td>400</td>
+            <td>3900</td>
+            <td>270000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('MEchanical','270000','50000','10000','430000','100000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>Mechtronics</td>
+            <td>2021</td>
+            <td>200</td>
+            <td>10000</td>
+            <td>200000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('Mechtronics','200000','50000','10000','360000','100000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>Media and Technology</td>
+            <td>2021</td>
+            <td>100</td>
+            <td>18000</td>
+            <td>200000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('Media and Technology','200000','50000','10000','360000','100000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>Biomedical</td>
+            <td>2021</td>
+            <td>100</td>
+            <td>15000</td>
+            <td>220000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('Biomedical','220000','50000','10000','380000','100000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>Biotechnology</td>
+            <td>2021</td>
+            <td>100</td>
+            <td>19000</td>
+            <td>200000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('Biotechnology','200000','50000','10000','380000','100000')">Apply here</button></td>
+        </tr>
+        <tr>
+            <td>B-arch</td>
+            <td>2021</td>
+            <td>400</td>
+            <td>18000</td>
+            <td>290000</td>
+            <td>10000</td>
+            <td>100000</td>
+            <td><button onclick="myFunction('B-arch','290000','50000','10000','441000','100000')">Apply here</button></td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+
+</body>
+<!-- adding extra--->
+
+
+
+<!----->
+</html>
